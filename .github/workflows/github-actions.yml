@@ -28,9 +28,9 @@ jobs:
     -
       name: EULA Accept
       run: |
-        tdskt platforms
-        tdskt eula nxp-la-opt-v5 setprop accepted true
-        tdskt platforms
+        sudo tdskt platforms
+        sudo tdskt eula nxp-la-opt-v5 setprop accepted true
+        sudo tdskt platforms
     -
       name: Enable Emulation
       run: |
