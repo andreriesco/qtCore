@@ -23,7 +23,8 @@ jobs:
       run: |
         cd ${{ github.workspace }}/moses-linux
         echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
-        sudo apt-get update && apt-get install libexpat1
+        sudo apt-get update
+        sudo apt-get install libexpat1
         sudo chmod +x moses
         sudo chmod +x tdskt
         sudo cp ./tdskt /usr/bin/tdskt
