@@ -29,6 +29,7 @@ jobs:
     -
       name: EULA Accept
       run: |
+        ls
         sudo chmod +x tdskt
         sudo ./tdskt platforms
         sudo ./tdskt eula nxp-la-opt-v5 setprop accepted true
