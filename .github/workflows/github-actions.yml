@@ -23,6 +23,7 @@ jobs:
       run: |
         cd ${{ github.workspace }}/moses-linux
         echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
+        ls
         sudo ./moses &
         sleep 15
     -
