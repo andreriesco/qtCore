@@ -24,6 +24,7 @@ jobs:
         cd ${{ github.workspace }}/moses-linux
         echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
         sudo chmod +x moses
+        sudo ln ./tdskt /usr/bin/tdskt
         sudo ./moses &
         sleep 15
     -
@@ -31,9 +32,9 @@ jobs:
       run: |
         ls
         sudo chmod +x tdskt
-        sudo ./tdskt platforms
-        sudo ./tdskt eula nxp-la-opt-v5 setprop accepted true
-        sudo ./tdskt platforms
+        sudo tdskt platforms
+        sudo tdskt eula nxp-la-opt-v5 setprop accepted true
+        sudo tdskt platforms
     -
       name: Enable Emulation
       run: |
