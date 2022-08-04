@@ -28,22 +28,22 @@ jobs:
     -
       name: EULA Accept
       run: |
-        sudo tdskt platforms
-        sudo tdskt eula nxp-la-opt-v5 setprop accepted true
-        sudo tdskt platforms
+        sudo ./tdskt platforms
+        sudo ./tdskt eula nxp-la-opt-v5 setprop accepted true
+        sudo ./tdskt platforms
     -
       name: Enable Emulation
       run: |
-        tdskt -p enableemulation
+        ./tdskt -p enableemulation
     -
       name: Load Application
       run: |
-        APPID=$(tdskt load ./appconfig_0/)
+        APPID=$(./tdskt load ./appconfig_0/)
         echo "APPID=$APPID" >> $GITHUB_ENV
     -
       name: Build SDK Container
       run: |
-        tdskt -p application ${{ env.APPID }} runsdk release
+        ./tdskt -p application ${{ env.APPID }} runsdk release
     -
       name: Build Application
       run: |
@@ -55,4 +55,4 @@ jobs:
     -
       name: Build Release Container
       run: |
-        tdskt -p application ${{ env.APPID }} build release
+        ./tdskt -p application ${{ env.APPID }} build release
