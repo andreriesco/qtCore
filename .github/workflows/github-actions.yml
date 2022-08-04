@@ -25,7 +25,7 @@ jobs:
         echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
         sudo chmod +x moses
         sudo chmod +x tdskt
-        sudo ln -s ./tdskt /usr/bin/tdskt
+        sudo cp ./tdskt /usr/bin/tdskt
         sudo ./moses &
         sleep 15
     -
