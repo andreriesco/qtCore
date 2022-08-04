@@ -24,6 +24,7 @@ jobs:
         cd ${{ github.workspace }}/moses-linux
         echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
         ls
+        sudo chmod +x moses
         sudo ./moses &
         sleep 15
     -
