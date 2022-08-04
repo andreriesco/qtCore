@@ -1,0 +1,133 @@
+devices:
+    common: []
+    debug: []
+    release: []
+dockercomposefile:
+    common: ''
+    debug: ''
+    release: ''
+extraparms:
+    common: {}
+    debug: {}
+    release: {}
+id: d3f48de8-b79a-4ae4-92b8-4a5bc6168352
+images:
+    debug: sha256:08fddb5b2c46016d6b8b2aeb908b3d5d42641e0c66fe455b4b226ea114ae535d
+    release: ''
+imagetags:
+    debug: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_debug_d3f48de8-b79a-4ae4-92b8-4a5bc6168352
+    release: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_d3f48de8-b79a-4ae4-92b8-4a5bc6168352
+modificationdate: '2022-08-02T14:08:12.455528'
+networks:
+    common: []
+    debug: []
+    release: []
+otapackagename: ''
+otapackageversion: 1.0.0
+platformid: arm32v7-qt5-wayland-no-ssh_bullseye
+ports:
+    common: {}
+    debug: {}
+    release: {}
+privatekey: '-----BEGIN RSA PRIVATE KEY-----
+
+    MIIEowIBAAKCAQEArPkxFxNjYZe/VGxxJKX80ia/siAwcW4sYwZl/we0DT4NDHFL
+
+    0gAqtAC4aRNKsGETBPOHGA94QIuay1Mc8e3ic4g1IWL+taLmsk83eDjDLn7Ps8wZ
+
+    /8yuQl0ePJKdrYIs0hwmaG8LwlqFHBADJixxhXRAfbADKyRq9S/enMKVb13zhbui
+
+    PyNwTn8JZ5FsIXwOJLJHiZJKjYjxHjUOkqkmrXieExDJ5oeVqvetBmKm7We4IGNF
+
+    4d2PqiQ7jXqwJDKqL2hPu8M89gQMgPZRkNLMgoAy2P6GeSyQIPeBxgXd3o0ymI4f
+
+    KllSjpvSTgfyz6/4/pS718khS11QJWeKr6GtoQIDAQABAoIBAAD7Q4Dr5F4ZBjYI
+
+    jP5OHlCDdYZBWkEEhOY1crX3IVmLYvfRe0KIa3WcxO8cs8lrLZhTOO6lJNOp7yGM
+
+    +c6yIL0y1klXllYpw9kaa7hICyx7/fn5VCLwUoNQI7QoiVJDGTXCgOHKEoUibhuu
+
+    CBSK/0Rod9a2vVfc86nrQP4++OnaOlnyRRSrYjffJASwccHDiwMKYL9S0pqeV0sq
+
+    5oZMCPbHecn0SfCe4tC4cfMcuHVRIawrZyE2M3ldc1YqndS+FNvjS3hLFE+nCrlL
+
+    qjnJUZvXn+nf5GBKd4qb7LXAFlZePd5tsdrCebVnWolFczaMVa3rgrutIVF7X8rp
+
+    zUMsiuECgYEAv+3xjN1Nby4VV6IQeMHGZj8Sxp6QRA47hDJKBx9Umd4do5NjUpgN
+
+    PjVmlax+yhf8DKZDwTNsJ0xwGr8Wy05PgPZvTfhduQJRWGCFMmNzddZGv93qFKXg
+
+    fgOQuyO9+I8j0E68whZSWhEePoCHFyMaKanP2/PnGhKj+6ZxEyDgCJECgYEA5rdJ
+
+    VVwCT8XmHO9vmwdjM6vff78o+FbliXwBRRlHzpgnCxGQzEz2eG3mrih3TfbVFr8r
+
+    cgQB7jcIZ6GXGHoLtP1R6Kl2IyhgRDNzFhbh8wBkpHXV4q8BfpJ0EPJyhDCjIfpD
+
+    cZbw4KbAetkhLkil1Km9+KFJuQK5UCrpnFFdXBECgYA+ACy+16KzHszwMT9m8xoX
+
+    X5q+JOzvvzVEwEYfxOQ8jH9An1U/kjT8+p04DrAqstLOd0t99xGiJFQ2n7JKXPLb
+
+    80ADjQ8hu/jxNsTwgSYEVAMo6hQ7NVau/pHbknFFAWCNY1Ig1Lsns0303OpG9CT4
+
+    fo3SPRlT19+3ZI40orMcsQKBgQC0JifPzBFOAuPkch1+Ou19+lWA5V3zU77VdIt1
+
+    TgEg0vOhk+yxaeMGNCJsmNJXgUXwBgPBelmbjUM10BowFZQwlaCwgCnr1+obNuVF
+
+    OUbivMrZE92XrDkJgQe59+XtTCEFNeoVttuNPweKpSJghn9eJ9BbZG0xVmwmqetR
+
+    kMLKUQKBgHl4SDxHH6QcOf6clpKKopmJjCeU/EipbJnu01KFevKEMIqfQsv538dD
+
+    dtdxuOyVmmW1WGXfA2gz9bYwy1V0QxEHK8Y52jR/He6iSaUaXetgjtcxofK5Gr8V
+
+    zsDSVWc7j99S841aZBxolP1B6GxOTbhskZlj3d7hd65VjmFYscmv
+
+    -----END RSA PRIVATE KEY-----
+
+    '
+props:
+    common:
+        appname: qtCore
+        arg: ''
+        buildcommands: ''
+        buildfiles: ''
+        command: ''
+        devpackages: ''
+        env: ''
+        exename: qtCore
+        expose: ''
+        extrapackages: ''
+        language: c-cpp-nossh
+        preinstallcommands: ''
+        sdkpostinstallcommands: ''
+        sdkpreinstallcommands: ''
+        targetcommands: ''
+        targetfiles: ''
+    debug:
+        arg: 'ARG SSHUSERNAME=#%application.username%#
+
+            '
+    release: {}
+publickey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCs+TEXE2Nhl79UbHEkpfzSJr+yIDBxbixjBmX/B7QNPg0McUvSACq0ALhpE0qwYRME84cYD3hAi5rLUxzx7eJziDUhYv61ouayTzd4OMMufs+zzBn/zK5CXR48kp2tgizSHCZobwvCWoUcEAMmLHGFdEB9sAMrJGr1L96cwpVvXfOFu6I/I3BOfwlnkWwhfA4kskeJkkqNiPEeNQ6SqSateJ4TEMnmh5Wq960GYqbtZ7ggY0Xh3Y+qJDuNerAkMqovaE+7wzz2BAyA9lGQ0syCgDLY/oZ5LJAg94HGBd3ejTKYjh8qWVKOm9JOB/LPr/j+lLvXySFLXVAlZ4qvoa2h
+sdkimages:
+    debug: sha256:b4cf11ee638fa242937abb424d2bb5d5194bdc2a22dc881ae0af223d78da6e83
+    release: ''
+sdkimagetags:
+    debug: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_debug_d3f48de8-b79a-4ae4-92b8-4a5bc6168352_sdk_image
+    release: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_d3f48de8-b79a-4ae4-92b8-4a5bc6168352_sdk_image
+sdksshaddress:
+    debug: null
+    release: null
+shutdownscript:
+    common: ''
+    debug: ''
+    release: ''
+startupscript:
+    common: ''
+    debug: ''
+    release: ''
+username: torizon
+volumes:
+    common: {}
+    debug:
+        /home/torizon/qtCore: /qtCore,rw
+    release: {}
