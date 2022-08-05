@@ -50,9 +50,9 @@ jobs:
     -
       name: Build Application
       run: |
-        echo "$PWD"
-        docker run --rm -t -v ../${PWD}:/app --env-file \
-        ${{ github.workspace }}/appconfig_0/containerEnv \
+        cd ..
+        docker run --rm -t -v ${PWD}:/app --env-file \
+        ./appconfig_0/containerEnv \
         qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_${APPID}_sdk_image bash -c \
         "cd /app && arm-linux-gnueabihf-qmake CONFIG+=debug && make && make install"
     -
