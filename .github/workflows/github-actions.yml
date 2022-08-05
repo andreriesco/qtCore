@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ${{ github.workspace }}
+        working-directory: ${{ github.workspace }}/moses-linux
 
     steps:
     - 
@@ -21,23 +21,19 @@ jobs:
     -
       name: Moses Up
       run: |
-        cd ${{ github.workspace }}/moses-linux
-        echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
+        echo "${{ github.workspace }}" >> $GITHUB_PATH
         sudo apt-get update
-        sudo apt-get install libexpat1 libpython3.9
-        sudo find / -name libpython3.9.so.1.0
+        sudo apt-get install libexpat1
         sudo chmod +x moses
         sudo chmod +x tdskt
-        sudo cp ./tdskt /usr/bin/tdskt
         sudo ./moses &
         sleep 15
     -
       name: EULA Accept
       run: |
-        ls
-        sudo tdskt platforms
-        sudo tdskt eula nxp-la-opt-v5 setprop accepted true
-        sudo tdskt platforms
+        sudo ./tdskt platforms
+        sudo ./tdskt eula nxp-la-opt-v5 setprop accepted true
+        sudo ./tdskt platforms
     -
       name: Enable Emulation
       run: |
@@ -55,8 +51,8 @@ jobs:
       name: Build Application
       run: |
       
-        docker run --rm -t -v ${PWD}:/app --env-file \
-        ${{ github.workspace }}/appconfig_0/containerEnv \
+        docker run --rm -t -v ../${PWD}:/app --env-file \
+        ../${{ github.workspace }}/appconfig_0/containerEnv \
         qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_${APPID}_sdk_image bash -c \
         "cd /app && arm-linux-gnueabihf-qmake CONFIG+=debug && make && make install"
     -
