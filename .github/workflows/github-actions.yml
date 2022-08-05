@@ -41,7 +41,7 @@ jobs:
     -
       name: Load Application
       run: |
-        APPID=$(./tdskt load ./appconfig_0/)
+        APPID=$(./tdskt load ../appconfig_0/)
         echo "APPID=$APPID" >> $GITHUB_ENV
     -
       name: Build SDK Container
