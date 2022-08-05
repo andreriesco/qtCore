@@ -18,8 +18,6 @@ jobs:
     - 
       name: Checkout repository
       uses: actions/checkout@v3
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     -
       name: Moses Up
       run: |
@@ -30,6 +28,8 @@ jobs:
         sudo chmod +x tdskt
         sudo ./moses &
         sleep 15
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
     -
       name: EULA Accept
       run: |
