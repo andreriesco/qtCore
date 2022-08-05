@@ -28,8 +28,6 @@ jobs:
         sudo chmod +x tdskt
         sudo ./moses &
         sleep 15
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     -
       name: EULA Accept
       run: |
@@ -49,6 +47,8 @@ jobs:
       name: Build SDK Container
       run: |
         ./tdskt -p application ${{ env.APPID }} runsdk release
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
     -
       name: Build Application
       run: |
