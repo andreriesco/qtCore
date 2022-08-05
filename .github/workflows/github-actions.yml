@@ -24,11 +24,11 @@ jobs:
         cd ${{ github.workspace }}/moses-linux
         echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
         sudo apt-get update
-        sudo apt-get install libexpat1 python3.8
+        sudo apt-get install libexpat1 python3.9
         sudo python3 --version
         sudo python --version
         ls /usr/bin/python*
-        sudo update-alternatives  --set python3 /usr/bin/python3.8
+        sudo update-alternatives  --set python3 /usr/bin/python3.9
         sudo chmod +x moses
         sudo chmod +x tdskt
         sudo cp ./tdskt /usr/bin/tdskt
