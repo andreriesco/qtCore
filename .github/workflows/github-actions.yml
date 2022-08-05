@@ -53,7 +53,7 @@ jobs:
       uses: addnab/docker-run-action@v3
       with:
           image: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_${APPID}_sdk_image
-          options: -v ${{ github.workspace }}:/var/www -v ${{ cd .. && pwd }}:/app --env-file \
+          options: -v ${{ cd .. && pwd }}:/app --env-file \
                    ../appconfig_0/containerEnv
           run: |
             cd /app
