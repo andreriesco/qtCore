@@ -47,8 +47,6 @@ jobs:
       name: Build SDK Container
       run: |
         ./tdskt -p application ${{ env.APPID }} runsdk release
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
     -
       name: Build Application
       run: |
