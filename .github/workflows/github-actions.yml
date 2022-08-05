@@ -25,6 +25,7 @@ jobs:
         echo "${{ github.workspace }}/moses-linux" >> $GITHUB_PATH
         sudo apt-get update
         sudo apt-get install libexpat1 libpython3.9
+        sudo find / -name libpython3.9.so.1.0
         sudo chmod +x moses
         sudo chmod +x tdskt
         sudo cp ./tdskt /usr/bin/tdskt
