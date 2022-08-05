@@ -58,4 +58,5 @@ jobs:
     -
       name: Build Release Container
       run: |
-        ./tdskt -p application ${{ env.APPID }} build release
+        cd ..
+        ./moses-linux/tdskt -p application ${{ env.APPID }} build release
