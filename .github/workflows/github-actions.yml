@@ -51,10 +51,10 @@ jobs:
       name: Build Application
       run: |
         cd ..
-        docker run --rm -t -v ${PWD}:/workspaces/qtCore --env-file \
+        docker run --rm -t -v ${PWD}:/workspaces/${{ github.event.repository.name }} --env-file \
         ./appconfig_0/containerEnv \
         qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_${APPID}_sdk_image bash -c \
-        "cd /workspaces/qtCore && arm-linux-gnueabihf-qmake CONFIG+=debug && make && make install"
+        "cd /workspaces/${{ github.event.repository.name }} && arm-linux-gnueabihf-qmake CONFIG+=debug && make && make install"
     -
       name: Run application
       run: |
