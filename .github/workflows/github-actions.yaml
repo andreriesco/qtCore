@@ -50,14 +50,6 @@ jobs:
         run: |
           ./moses-linux/tdskt -p application ${{ env.APPID }} build release
       -
-        name: Dockerhub
-        run: |
-          docker login --username=${{ secrets.DOCKERHUB_USERNAME }} --password=${{ secrets.DOCKERHUB_PASSWORD }}
-          docker tag \
-            qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_${{ env.APPID }}:latest \
-            ${{ secrets.DOCKERHUB_USERNAME }}/qtcore:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/qtcore:latest
-      -
         name: Login to DockerHub
         uses: docker/login-action@v2
         with:
