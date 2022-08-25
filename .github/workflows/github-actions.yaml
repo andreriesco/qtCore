@@ -65,5 +65,5 @@ jobs:
           wget https://raw.githubusercontent.com/toradex/tcb-env-setup/master/tcb-env-setup.sh
           echo "${{ secrets.TORIZON_OTA_CREDENTIALS }}" | base64 -d > credentials.zip
           ls
-          source tcb-env-setup.sh
+          source tcb-env-setup.sh -a remote
           torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.1 docker-compose.yml
