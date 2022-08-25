@@ -60,3 +60,8 @@ jobs:
         run: |
          docker tag qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_${{ env.APPID }}:latest ${{ secrets.DOCKERHUB_USERNAME }}/qtcore:latest
          docker push ${{ secrets.DOCKERHUB_USERNAME }}/qtcore:latest
+      - name: Publish Application To OTA Server
+        run: |
+          wget https://raw.githubusercontent.com/toradex/tcb-env-setup/master/tcb-env-setup.sh 
+          source tcb-env-setup.sh 
+          torizoncore-builder platform push --credentials ${{ secrets.TORIZON_OTA_CREDENTIALS }} --package-name qtCore --package-version qtCore-1.0.1 ${{ github.workspace }}/docker-compose.ota.yaml
