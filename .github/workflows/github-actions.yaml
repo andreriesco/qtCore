@@ -64,4 +64,4 @@ jobs:
         run: |
           wget https://raw.githubusercontent.com/toradex/tcb-env-setup/master/tcb-env-setup.sh 
           source tcb-env-setup.sh 
-          torizoncore-builder platform push --credentials ${{ secrets.TORIZON_OTA_CREDENTIALS }} --package-name qtCore --package-version qtCore-1.0.1 ${{ github.workspace }}/docker-compose.ota.yaml
+          torizoncore-builder platform push --credentials ${{ secrets.TORIZON_OTA_CREDENTIALS }} --package-name qtCore --package-version qtCore-1.0.1 ${{ github.workspace }}/docker-compose.yml
