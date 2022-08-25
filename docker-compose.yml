@@ -1,0 +1,8 @@
+services:
+  qtcore_arm32v7-debian-_bullseye_release_2dbec6c6-466b-4abe-a176-001f1921230d:
+    depends_on: []
+    devices: []
+    image: andreriesco/qtcore
+    ports: []
+    volumes: []
+version: '2.4'
