@@ -162,6 +162,7 @@ get_latest_tag () {
     latest=0
     for tag in $(echo $@)
     do
+        echo "jjjjjjjjjaaaaaaa
         if [[ $tag != *"."* ]]
         then
             if [[ $tag -gt $latest ]]
