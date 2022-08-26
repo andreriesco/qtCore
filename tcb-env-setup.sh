@@ -4,7 +4,7 @@
 SOURCED=0
 echo "aaaaaaa"
 # bash
-elif [ -n "$BASH_VERSION" ]; then
+if [ -n "$BASH_VERSION" ]; then
     (return 0 2>/dev/null) && SOURCED=1
 
 # All other shells: examine $0 for known shell binary filenames
