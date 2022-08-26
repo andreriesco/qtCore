@@ -16,12 +16,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      -
-        name: Login to DockerHub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Publish Application To OTA Server
         run: |
           wget https://raw.githubusercontent.com/toradex/tcb-env-setup/master/tcb-env-setup.sh
@@ -62,7 +56,12 @@ jobs:
           qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_d3f48de8-b79a-4ae4-92b8-4a5bc6168352_sdk_image bash -c "cd /workspaces/${{ github.event.repository.name }} && arm-linux-gnueabihf-qmake CONFIG+=debug && make && make install"
       - name: Run application
         run: |
-          ./moses-linux/tdskt -p application ${{ env.APPID }} build release
+          ./moses-linux/tdskt -p application ${{ env.APPID }} build release      -
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Push to DockerHub
         run: |
