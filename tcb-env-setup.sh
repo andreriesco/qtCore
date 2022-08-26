@@ -169,11 +169,11 @@ get_latest_tag () {
                 echo "hjhkhkjhjkh"
                 echo "$tag"
                 latest=$tag
-                echo "jjjjjjjjjaaaaaaa"
-                echo "$tag"
             fi
         fi
     done
+    echo "jjjjjjjjjaaaaaaa"
+    echo "$tag"
     return "$latest"
 }
 echo "iiiiiiiiiiiiii"
