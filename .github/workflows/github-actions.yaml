@@ -23,7 +23,7 @@ jobs:
           ls
           sudo apt-get update
           chmod +x tcb-env-setup.sh
-          source tcb-env-setup.sh -a remote
+          ./tcb-env-setup.sh -a remote
           torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.1 docker-compose.yml
       - name: Moses Up
         run: |
