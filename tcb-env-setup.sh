@@ -98,7 +98,7 @@ under_windows=0
 if uname -r | grep -i "microsoft" > /dev/null; then
     under_windows=1
 fi
-
+echo "eeeeee"
 # Parse flags
 volumes=" -v /deploy "
 storage="storage"
@@ -119,14 +119,14 @@ do
         -h|*) tcb_env_setup_usage; tcb_env_setup_cleanup; return;;
     esac
 done
-
+echo "fffffffffff"
 if [[ $source = "empty" ]] || [[ $user_tag = "empty" ]] || [[ $storage = "empty" ]]
 then
     tcb_env_setup_usage
     tcb_env_setup_cleanup
     return
 fi
-
+echo "gggggggg"
 # Check that only one flag is used at a time
 if [[ -n $source && -n $user_tag ]]
 then
