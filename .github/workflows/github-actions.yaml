@@ -66,6 +66,6 @@ jobs:
           echo "${{ secrets.TORIZON_OTA_CREDENTIALS }}" | base64 -d > credentials.zip
           ls
           sudo apt-get update
-          docker pull torizon/torizoncore-builder
+          docker pull torizon/torizoncore-builder:3.5.1
           source tcb-env-setup.sh -a remote
           torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.1 docker-compose.yml
