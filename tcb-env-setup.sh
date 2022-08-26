@@ -12,7 +12,7 @@ else
     # Detects `sh` and `dash`; add additional shell filenames as needed.
     case ${0##*/} in sh|dash) SOURCED=1;; esac
 fi
-
+echo "bbbbbb"
 # check if it was sourced
 if [ "$SOURCED" = "0" ]; then
     echo "Error: don't run $0, source it."
@@ -39,9 +39,9 @@ tcb_env_setup_cleanup () {
     unset -f tcb_env_setup_usage 2>/dev/null
     unset -f get_latest_tag 2>/dev/null
 }
-
+echo "ccccccc"
 tcb_env_setup_cleanup
-
+echo "ddddddd"
 # Usage help message
 tcb_env_setup_usage () {
     echo "Usage: source tcb-env-setup.sh [OPTIONS] [-- <docker_options>]"
