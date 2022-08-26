@@ -151,7 +151,7 @@ fi
 if [ $under_windows = "1" -a $# -eq 0 ]; then
     echo "Warning: If you intend to use torizoncore-builder as a server (listening to ports), then you should pass extra parameters to \"docker run\" (via the -- switch)."
 fi
-
+echo "hhhhhhhhh"
 # Get list of image tags from docker hub
 remote_tags=$(curl -L -s 'https://registry.hub.docker.com/v1/repositories/torizon/torizoncore-builder/tags' | awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'name'\042/){print $(i+1)}}}' | tr -d '" ' | sed -n P)
 # Get list of image tags locally
@@ -172,7 +172,7 @@ get_latest_tag () {
     done
     return "$latest"
 }
-
+echo "iiiiiiiiiiiiii"
 get_latest_tag "$remote_tags"
 latest_remote=$?
 
