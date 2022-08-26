@@ -16,6 +16,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Publish Application To OTA Server
         run: |
           wget https://raw.githubusercontent.com/toradex/tcb-env-setup/master/tcb-env-setup.sh
@@ -57,12 +63,6 @@ jobs:
       - name: Run application
         run: |
           ./moses-linux/tdskt -p application ${{ env.APPID }} build release
-      -
-        name: Login to DockerHub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Push to DockerHub
         run: |
