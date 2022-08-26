@@ -2,15 +2,7 @@
 
 # Check to make sure script is being sourced otherwise exit
 SOURCED=0
-
-# zsh
-if [ -n "$ZSH_EVAL_CONTEXT" ]; then
-    case $ZSH_EVAL_CONTEXT in *:file) SOURCED=1;; esac
-
-# ksh
-elif [ -n "$KSH_VERSION" ]; then
-    [ "$(cd $(dirname -- "$0") && pwd -P)/$(basename -- "$0")" != "$(cd $(dirname -- ${.sh.file}) && pwd -P)/$(basename -- ${.sh.file})" ] && SOURCED=1
-
+echo "aaaaaaa"
 # bash
 elif [ -n "$BASH_VERSION" ]; then
     (return 0 2>/dev/null) && SOURCED=1
