@@ -218,7 +218,7 @@ then
     pull_remote=true
     chosen_tag=$user_tag
 fi
-
+echo "kkkkkkkkkkk"
 # Sets up chosen version of Tcore-builder based on result from above
 echo -e "Setting up TorizonCore Builder with version $chosen_tag.\n"
 
@@ -233,7 +233,7 @@ then
         return
     fi
 fi
-
+echo "jjjjjjjjjjjjj"
 # if installing latest version, download and source the bash completion script
 if [[ "$chosen_tag" == "$latest_remote" ]]
 then
