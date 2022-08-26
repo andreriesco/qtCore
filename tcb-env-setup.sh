@@ -3,8 +3,17 @@
 # Check to make sure script is being sourced otherwise exit
 SOURCED=0
 echo "aaaaaaa"
+
+# zsh
+if [ -n "$ZSH_EVAL_CONTEXT" ]; then
+    case $ZSH_EVAL_CONTEXT in *:file) SOURCED=1;; esac
+
+# ksh
+elif [ -n "$KSH_VERSION" ]; then
+    [ "$(cd $(dirname -- "$0") && pwd -P)/$(basename -- "$0")" != "$(cd $(dirname -- ${.sh.file}) && pwd -P)/$(basename -- ${.sh.file})" ] && SOURCED=1
+    
 # bash
-if [ -n "$BASH_VERSION" ]; then
+elif [ -n "$BASH_VERSION" ]; then
     (return 0 2>/dev/null) && SOURCED=1
 
 # All other shells: examine $0 for known shell binary filenames
