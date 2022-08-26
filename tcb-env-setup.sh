@@ -174,12 +174,12 @@ get_latest_tag () {
     done
     echo "jjjjjjjjjaaaaaaa"
     echo "$latest"
-    return "$latest"
+    return
 }
 echo "iiiiiiiiiiiiii"
 get_latest_tag "$remote_tags"
 echo "jjjjjjjjjaaaaaaa"
-latest_remote=$?
+latest_remote=$latest
 # Figure out whether to use latest local or latest remote version of Tcore-builder based on either flags or user response
 if [[ -z $local_tags  && -z $source && -z $user_tag ]]
 then
