@@ -163,11 +163,13 @@ get_latest_tag () {
     for tag in $(echo $@)
     do
         echo "jjjjjjjjjaaaaaaa"
+        echo "$tag"
         if [[ $tag != *"."* ]]
         then
             if [[ $tag -gt $latest ]]
             then
                 echo "hjhkhkjhjkh"
+                echo "$tag"
                 latest=$tag
             fi
         fi
