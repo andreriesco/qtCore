@@ -63,4 +63,4 @@ jobs:
           alias torizoncore-builder='docker run --rm -v /deploy -v "$(pwd)":/workdir -v storage:/storage -v /var/run/docker.sock:/var/run/docker.sock --network=host torizon/torizoncore-builder:3' 
           pwd
           ls ${{ github.workspace }}
-          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.1 /${{ github.workspace }}/docker-compose.yml
+          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.1 docker-compose.yml
