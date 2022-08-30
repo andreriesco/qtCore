@@ -62,4 +62,4 @@ jobs:
           cd 
           shopt -s expand_aliases 
           alias torizoncore-builder='docker run --rm -v /deploy -v "$(pwd)":/workdir -v storage:/storage -v /var/run/docker.sock:/var/run/docker.sock --network=host torizon/torizoncore-builder:3' 
-          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.6 appconfig_0/docker-compose.yml
+          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.7 appconfig_0/docker-compose.yml
