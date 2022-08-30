@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3   
       - name: Set output
-        run: echo ::set-output name=${{ github.head_ref }}
+        run: echo "running on branch ${{ github.head_ref }}"
       - name: Moses Up
         run: |
           echo "${{ github.workspace }}" >> $GITHUB_PATH
