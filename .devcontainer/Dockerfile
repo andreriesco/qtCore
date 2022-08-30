@@ -5,7 +5,7 @@
 # you can re-build it by pressing F1 in Visual Studio Code and selecting:
 # "Torizon: Rebuild SDK and reload in container"
 # after this operation you should be able to re-open your project inside a container
-FROM qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_debug_d3f48de8-b79a-4ae4-92b8-4a5bc6168352_sdk_image
+FROM qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_d3f48de8-b79a-4ae4-92b8-4a5bc6168352_sdk_image
 
 # This is required to allow regular user inside the container to access docker socket
-RUN addgroup docker && groupmod --non-unique --gid 135 docker && adduser torizon docker
+RUN addgroup docker && groupmod --non-unique --gid 999 docker && adduser torizon docker

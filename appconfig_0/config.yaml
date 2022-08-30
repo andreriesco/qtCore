@@ -12,18 +12,18 @@ extraparms:
     release: {}
 id: d3f48de8-b79a-4ae4-92b8-4a5bc6168352
 images:
-    debug: sha256:08fddb5b2c46016d6b8b2aeb908b3d5d42641e0c66fe455b4b226ea114ae535d
-    release: ''
+    debug: ''
+    release: sha256:359276026b90931bbb0fd6e41e440e0f454f51777abe0c85c487f755d17962b6
 imagetags:
     debug: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_debug_d3f48de8-b79a-4ae4-92b8-4a5bc6168352
     release: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_d3f48de8-b79a-4ae4-92b8-4a5bc6168352
-modificationdate: '2022-08-02T14:08:12.455528'
+modificationdate: '2022-08-30T17:13:02.006161'
 networks:
     common: []
     debug: []
     release: []
-otapackagename: ''
-otapackageversion: 1.0.0
+otapackagename: qtCore
+otapackageversion: 1.0.6
 platformid: arm32v7-qt5-wayland-no-ssh_bullseye
 ports:
     common: {}
@@ -100,6 +100,7 @@ props:
         preinstallcommands: ''
         sdkpostinstallcommands: ''
         sdkpreinstallcommands: ''
+        tag: andreriesco/qtcore
         targetcommands: ''
         targetfiles: ''
     debug:
@@ -109,8 +110,8 @@ props:
     release: {}
 publickey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCs+TEXE2Nhl79UbHEkpfzSJr+yIDBxbixjBmX/B7QNPg0McUvSACq0ALhpE0qwYRME84cYD3hAi5rLUxzx7eJziDUhYv61ouayTzd4OMMufs+zzBn/zK5CXR48kp2tgizSHCZobwvCWoUcEAMmLHGFdEB9sAMrJGr1L96cwpVvXfOFu6I/I3BOfwlnkWwhfA4kskeJkkqNiPEeNQ6SqSateJ4TEMnmh5Wq960GYqbtZ7ggY0Xh3Y+qJDuNerAkMqovaE+7wzz2BAyA9lGQ0syCgDLY/oZ5LJAg94HGBd3ejTKYjh8qWVKOm9JOB/LPr/j+lLvXySFLXVAlZ4qvoa2h
 sdkimages:
-    debug: sha256:b4cf11ee638fa242937abb424d2bb5d5194bdc2a22dc881ae0af223d78da6e83
-    release: ''
+    debug: sha256:6f1b59a4866ce45b790894bba1f09a2b47a80c22fab1b56a3e4ea9a4193cc1fb
+    release: sha256:6f1b59a4866ce45b790894bba1f09a2b47a80c22fab1b56a3e4ea9a4193cc1fb
 sdkimagetags:
     debug: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_debug_d3f48de8-b79a-4ae4-92b8-4a5bc6168352_sdk_image
     release: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_d3f48de8-b79a-4ae4-92b8-4a5bc6168352_sdk_image

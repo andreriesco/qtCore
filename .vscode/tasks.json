@@ -25,10 +25,7 @@
             "problemMatcher": {
                 "base": "$gcc"
             },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
+            "group": "build",
             "dependsOn": [
                 "qmake_debug"
             ]
@@ -55,7 +52,10 @@
             "problemMatcher": {
                 "base": "$gcc"
             },
-            "group": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "dependsOn": [
                 "qmake_release"
             ]
@@ -85,13 +85,11 @@
             "type": "shell",
             "group": "none",
             "dependsOn": [
-                "build_debug"
+                "build_release"
             ]
         }
     ],
     "options": {
-        "env": {
-            "TORIZON_PROP_ARG": "ARG SSHUSERNAME=#%application.username%#\n"
-        }
+        "env": {}
     }
 }

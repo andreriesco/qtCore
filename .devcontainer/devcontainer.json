@@ -23,7 +23,7 @@
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.moses,target=/home/torizon/.moses,type=bind",
         "source=//var/run/docker.sock,target=/var/run/docker.sock,type=bind",
-        "source=/home/andreriesco/Documents/IDEExtension/repositories/dev/vs-code-plugin/torizon,target=/home/torizon/.torizon-extension,type=bind"
+        "source=/home/andreriesco/Documents/IDEExtension10/repositories/dev/vs-code-plugin/torizon,target=/home/torizon/.torizon-extension,type=bind"
     ],
     "postCreateCommand": "mkdir -p /home/torizon/.vscode-server-insiders/extensions ; mkdir -p /home/torizon/.vscode-server/extensions ; ln -s /home/torizon/.torizon-extension /home/torizon/.vscode-server-insiders/extensions/toradex.torizon ; ln -s /home/torizon/.torizon-extension /home/torizon/.vscode-server/extensions/toradex.torizon ; true"
 }
