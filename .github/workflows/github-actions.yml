@@ -2,10 +2,10 @@ name: GitHub Actions
 'on':
   push:
     branches:
-      - '${{ github.ref_name }}'
+      - $GITHUB_REF_NAME
   pull_request:
     branches:
-      - '${{ github.ref_name }}'
+      - $GITHUB_REF_NAME
 jobs:
   build:
     timeout-minutes: 360
