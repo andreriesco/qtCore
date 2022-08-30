@@ -1,11 +1,5 @@
 name: GitHub Actions
-'on':
-  push:
-    branches:
-      - '${{ github.head_ref }}' 
-  pull_request:
-    branches:
-      - '${{ github.head_ref }}'
+on: [push, pull_request]
 jobs:
   build:
     timeout-minutes: 360
@@ -15,7 +9,9 @@ jobs:
         working-directory: '${{ github.workspace }}'
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3   
+      - name: Set output
+        run: echo ::set-output name=${{ github.head_ref }}
       - name: Moses Up
         run: |
           echo "${{ github.workspace }}" >> $GITHUB_PATH
