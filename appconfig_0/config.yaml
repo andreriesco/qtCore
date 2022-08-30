@@ -17,13 +17,13 @@ images:
 imagetags:
     debug: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_debug_d3f48de8-b79a-4ae4-92b8-4a5bc6168352
     release: qtcore_arm32v7-qt5-wayland-no-ssh_bullseye_release_d3f48de8-b79a-4ae4-92b8-4a5bc6168352
-modificationdate: '2022-08-30T17:13:02.006161'
+modificationdate: '2022-08-30T17:15:17.349555'
 networks:
     common: []
     debug: []
     release: []
 otapackagename: qtCore
-otapackageversion: 1.0.6
+otapackageversion: 1.0.7
 platformid: arm32v7-qt5-wayland-no-ssh_bullseye
 ports:
     common: {}

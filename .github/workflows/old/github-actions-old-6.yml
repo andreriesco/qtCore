@@ -1,7 +1,11 @@
 name: GitHub Actions
 'on':
-  - push
-  - pull_request
+  push:
+    branches:
+      - '${{ github.base_ref }}'
+  pull_request:
+    branches:
+      - '${{ github.base_ref }}'
 jobs:
   build:
     timeout-minutes: 360
@@ -54,8 +58,8 @@ jobs:
           docker push andreriesco/qtcore
       - name: Publish Application To OTA Server
         run: |
-          cd ${{ github.workspace }} 
           echo "${{ secrets.TORIZON_OTA_CREDENTIALS }}" | base64 -d > credentials.zip 
+          cd 
           shopt -s expand_aliases 
           alias torizoncore-builder='docker run --rm -v /deploy -v "$(pwd)":/workdir -v storage:/storage -v /var/run/docker.sock:/var/run/docker.sock --network=host torizon/torizoncore-builder:3' 
-          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.9 appconfig_0/docker-compose.yml
+          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.1 ${{ github.workspace }}/docker-compose.yml
