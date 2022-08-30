@@ -2,10 +2,10 @@ name: GitHub Actions
 'on':
   push:
     branches:
-      - '${{ github.base_ref }}'
+      - master
   pull_request:
     branches:
-      - '${{ github.base_ref }}'
+      - master
 jobs:
   build:
     timeout-minutes: 360
