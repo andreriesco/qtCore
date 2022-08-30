@@ -1,9 +1,9 @@
-name: GitHub Actions
+name: 'GitHub Actions build, push and publish app'
 'on':
   - push
   - pull_request
 jobs:
-  build:
+  build-push-publish:
     timeout-minutes: 360
     runs-on: ubuntu-latest
     defaults:
@@ -58,4 +58,4 @@ jobs:
           echo "${{ secrets.TORIZON_OTA_CREDENTIALS }}" | base64 -d > credentials.zip 
           shopt -s expand_aliases 
           alias torizoncore-builder='docker run --rm -v /deploy -v "$(pwd)":/workdir -v storage:/storage -v /var/run/docker.sock:/var/run/docker.sock --network=host torizon/torizoncore-builder:3' 
-          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.9 appconfig_0/docker-compose.yml
+          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.11 appconfig_0/docker-compose.yml
