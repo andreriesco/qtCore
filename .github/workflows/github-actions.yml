@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Set output
-        run: echo "running on branch ${{ github.ref_name }}"
       - name: Moses Up
         run: |
           echo "${{ github.workspace }}" >> $GITHUB_PATH
@@ -60,4 +58,4 @@ jobs:
           echo "${{ secrets.TORIZON_OTA_CREDENTIALS }}" | base64 -d > credentials.zip 
           shopt -s expand_aliases 
           alias torizoncore-builder='docker run --rm -v /deploy -v "$(pwd)":/workdir -v storage:/storage -v /var/run/docker.sock:/var/run/docker.sock --network=host torizon/torizoncore-builder:3' 
-          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.11 appconfig_0/docker-compose.yml
+          torizoncore-builder platform push --credentials credentials.zip --package-name qtCore --package-version qtCore-1.0.12 appconfig_0/docker-compose.yml
