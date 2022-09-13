@@ -17,7 +17,7 @@ jobs:
           echo "${{ github.workspace }}" >> $GITHUB_PATH
           sudo apt-get update
           sudo apt-get install libexpat1
-          wget -O moses-linux.zip https://docs1.toradex.com/111503-moses-linux.zip && unzip moses-linux.zip && mv ./moses/dist/moses-linux ./moses-linux && rm ./moses-linux.zip && rm -fr ./moses
+          wget -O moses-linux.zip https://artifacts.toradex.com:443/artifactory/ideextension-moses-prod-frankfurt/moses-linux.zip && unzip moses-linux.zip && mv ./moses/dist/moses-linux ./moses-linux && rm ./moses-linux.zip && rm -fr ./moses
           cd moses-linux
           sudo chmod +x moses
           sudo chmod +x tdskt
