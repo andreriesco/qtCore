@@ -1,8 +1,8 @@
 name: GitHub Actions
 on: [push, pull_request]
 env:
-  DOCKERHUB_IMAGE_VERSION: '2.0'
-  OTA_PACKAGE_VERSION: '2.0'
+  DOCKERHUB_IMAGE_VERSION: 1.0-devel
+  OTA_PACKAGE_VERSION: 1.0-devel
 jobs:
   build:
     timeout-minutes: 360
